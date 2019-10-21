@@ -324,3 +324,164 @@ $为X的概率分布函数，简称分布函数$
 
 ## 连续型随机变量及其概率密度
 
+### 定义
+
+对于随机变量$X$的分布函数$F(x)$,若存在非负的函数f(x),使对于任意实数$x$有：
+
+$F(x)=\int_{-\infty}^{x}f(t)dt$
+
+则称$X$为<font color=Blue>连续型随机变量</font>, 其中$f(x)$成为$X$的<font color=Blue>概率密度函数</font>,简称概率密度。有时也写为$f_X(x)$
+
+### $f(x)$的性质
+
+1. $f(x)\geq0$
+
+2. $\int_{-\infty}^{+\infty}f(x)dx=1$
+
+3. 对于任意的实数$x_1,x_2(x_1<x_2)$
+
+   $P(x_1<X\leq x_2)=\int_{x_1}^{x_2}f(t)dt$;
+
+   $\Rightarrow$对任意的实数a，$P(X=a)=0$. 且$P(x_1<X\leq x_2)=P(x_1<X<x_2)$
+
+   对于连续型的随机变量$X$,有$P(X\in D)=\int_{D}f(x)dx,任意D\sub R.$
+
+4. 在$f(x)$连续点$x,F'(x)=f(x)$.
+
+   即在$f(x)$的连续点，
+
+   $f(x)=F'(x)=\lim_{\Delta x\rightarrow0}\frac{F(x+\Delta x)-F(x)}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{P(x<X\leq x+\Delta x)}{\Delta x}$
+
+   $P(x<X\leq x+\Delta x)\approx f(x)\cdot\Delta x$
+
+   这表示X落在点x附近$(x,x+\Delta x]$的概率近似等于$f(x)\Delta x$
+
+### 说明
+
+1. $f(x)$值的含义：
+
+   当$\Delta x$充分小时，$P(x<X\leq x+\Delta x)\approx f(x)\cdot\Delta x$
+
+2. $f(x)$的值是可以大于1的
+
+3. $F(x)=\int_{-\infty}^{x}f(t)dt$
+
+   $f(x)=\frac{d}{dx}F(x)$
+
+## 均匀分布和指数分布
+
+### 均匀分布
+
+#### 定义
+
+若$X$的概率密度函数为
+$$
+f(x)=
+\begin{cases}
+\frac{1}{b-a},&&x\in (a,b); \\
+0,&&其他.
+\end{cases}
+$$
+其中$a<b$,就称$X$服从$(a,b)$上的<font color=Blue>均匀分布(Uniform)</font>,记为$X \sim U(a,b)$或$X \sim Unif(a,b)$.
+
+#### 性质
+
+均匀分布具有等可能性
+
+即，对于任意的$a<k<k+l<b$,均有$P(k<X<k+l)=\int_k^{k+l}\frac{1}{b-a}dt=\frac{l}{b-a}$,与$k$无关，仅与$l$有关。
+
+即，服从$U(a,b)$上的均匀分布的随机变量X落入$(a,b)$中的任意自取件上的概率只与其区间长度有关， 与区间所处的位置无关
+
+#### 均匀分布的概率计算
+
+若$X\sim U(a,b)$,则对于$\forall I\sub R$,有
+
+法一： $P(X\in I)=\int_{I}f(x)dx$
+
+法二：$P(X\in I)=\frac{I\bigcap (a,b) 的长度}{(a,b)的长度}$
+
+### 指数分布
+
+#### 定义
+
+若$X$的概率密度函数为
+$$
+f(x)=
+\begin{cases}
+\lambda e^{-\lambda x},&&x>0;\\
+0,&&x\leq0,
+\end{cases}
+$$
+其中$\lambda>0$,就称$X$服从参数为$\lambda$的<font color=Blue>指数分布(Exponential)</font>,记为$X\sim E(\lambda)$或$X\sim Exp(\lambda)$
+
+分布函数为：
+$$
+F(x)=
+\begin{cases}
+1-e^{-\lambda x},&&x>0;\\
+0,&&x\leq0.
+\end{cases}
+$$
+
+#### 性质
+
+<font color=Blue>指数分布具有无记忆性</font>
+
+对于$t_0>0,t>0$,
+
+$P(X>t_0+t|X>t_0)=\frac{P(X>t_0+t,X>t_0)}{P(X>t_0)}=\frac{P(X>t_0+t)}{P(X>t_0)}=\frac{1-F(t_0+t)}{1-F(t_0)}=\frac{e^{-\lambda(t_0+t)}}{e^{-\lambda t_0}}=e^{-\lambda t}=P(X>t)$
+
+#### 指数分布的用途
+
+1. 可以用来表示独立随机事件发生的时间间隔，比如旅客进机场的时间间隔、中文维基百科新条目出现的时间间隔等等；
+2. 在排队论中，一个顾客接受服务的时间长短也可以用指数分布来近似
+3. 无记忆性的现象(连续时)
+
+## 正态分布
+
+### 定义
+
+若$X$的概率密度函数为$f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-u)^2}{2\sigma ^2}},-\infty<x<+\infty$,其中$-\infty<\mu<\infty,\sigma>0$,就称$X$服从参数为$\mu,\sigma$的<font color=Blue>正态分布</font>(或高斯分布),记为$X\sim N(\mu,\sigma^2)$
+
+### 特征
+
+1. $f(x)$关于$x=\mu$对称；
+2. 当$x\leq\mu$时，$f(x)$时严格单调递增函数；
+3. $f_{max}=f(\mu)=\frac{1}{\sqrt{2\pi}\sigma}$;
+4. $\lim_{|x-\mu|\rightarrow\infty}f(x)=0$
+
+### 两个参数的含义：
+
+1. 当固定$\sigma$，改变$\mu$的大小时，$f(x)$图形的形状不变，只是沿着$x$轴作平移变换；$\color{blue}\mu$<font color=Blue>称为位置参数</font>(决定对称轴位置)
+2. 当固定$\mu$,改变$\sigma$大小时,$f(x)$图形的对称轴不变，而形状在改变,$\sigma$越小,图形越高越瘦,$\sigma$越大，图形越胖越矮。$\color{blue} \sigma$<font color=Blue>称为尺度参数</font>(决定曲线分散程度)
+
+
+
+### 正态分布的用途
+
+1. 自然界和人类社会中很多现象可以看做正态分布
+
+   如： 人的胜利尺寸(身高、体重);
+
+   ​		医学检验指标(红细胞数、血小板);
+
+   ​		测量误差等等
+
+2. 多个随机变量的和可以用正态分布来近似
+
+   如: 注册MOOC的某位同学完成所有作业的时间;二项分布;等等(By 中心极限定理)
+
+### 标准正态分布
+
+若$Z\sim N(0,1)$,称$Z$服从标准正态分布。
+
+$Z$的概率密度函数:$\varphi(z)=\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}$.
+
+$Z$的分布函数:$\phi(z)=\int_{-\infty}^z\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt$.
+
+重要性质: $\color{blue}{\phi(-z_0)=1-\phi(z_0)}$,对于任意的实数$z_0$都成立。  因为关于y轴对称。
+
+### 正态分布转换成标准正态分布
+
+性质： 当$X\sim N(\mu,\sigma^2)$时, $\frac{X-\mu}{\sigma}\sim N(0,1)$.
+
