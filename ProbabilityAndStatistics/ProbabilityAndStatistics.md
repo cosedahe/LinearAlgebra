@@ -455,7 +455,7 @@ $P(X>t_0+t|X>t_0)=\frac{P(X>t_0+t,X>t_0)}{P(X>t_0)}=\frac{P(X>t_0+t)}{P(X>t_0)}=
 1. 当固定$\sigma$，改变$\mu$的大小时，$f(x)$图形的形状不变，只是沿着$x$轴作平移变换；$\color{blue}\mu$<font color=Blue>称为位置参数</font>(决定对称轴位置)
 2. 当固定$\mu$,改变$\sigma$大小时,$f(x)$图形的对称轴不变，而形状在改变,$\sigma$越小,图形越高越瘦,$\sigma$越大，图形越胖越矮。$\color{blue} \sigma$<font color=Blue>称为尺度参数</font>(决定曲线分散程度)
 
-
+![正态分布图像](https://github.com/cosedahe/Math/blob/terry/ProbabilityAndStatistics/images/正态分布图形.png?raw=true)
 
 ### 正态分布的用途
 
@@ -480,6 +480,8 @@ $Z$的概率密度函数:$\varphi(z)=\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}$.
 $Z$的分布函数:$\phi(z)=\int_{-\infty}^z\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt$.
 
 重要性质: $\color{blue}{\phi(-z_0)=1-\phi(z_0)}$,对于任意的实数$z_0$都成立。  因为关于y轴对称。
+
+![标准正态分布表](https://github.com/cosedahe/Math/blob/terry/ProbabilityAndStatistics/images/标准正态分布表.jpeg?raw=true)
 
 ### 正态分布转换成标准正态分布
 
