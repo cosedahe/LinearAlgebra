@@ -487,3 +487,59 @@ $Z$的分布函数:$\phi(z)=\int_{-\infty}^z\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{
 
 性质： 当$X\sim N(\mu,\sigma^2)$时, $\frac{X-\mu}{\sigma}\sim N(0,1)$.
 
+即：当$X\sim N(\mu,\sigma^2)$时，对于任意实数$a$,有$F_X(a)=P(X\leq a)=P(\frac{X-\mu}{\sigma}\leq\frac{a-\mu}{\sigma})=\Phi(\frac{a-\mu}{\sigma})$
+
+## 随机变量函数的分布
+
+一般，若已知$X$的概率分布, $Y=g(x)$, 求$Y$的概率分布的过程为：
+
+<font color=Blue>先给出Y的可能取值，再利用等价事件来给出概率分布</font>
+
+- 若$X$为离散型随机变量，则先写出$Y$的可能取值: $y_1,y_2,\cdots,y_j,\cdots;$
+
+  再找出$\{Y=y_j\}$的等价事件$\{X\in D\}$, 得$P(Y=y_j)=P(X\in D)$
+
+- 若$X$为连续型随机变量，先根据$X$的取值范围，给出$Y$的取值范围; 然后写出$Y$的概率分布函数: $F_Y(y)=P(Y\leq y)$, 找出$\{Y\leq y\}$的等价事件$\{X\in D\}$, 得$F_Y(y)=P(X\in D)$; 再求出$Y$的概率密度函数$f_Y(y)$.
+
+### 定理
+
+设随机变量$X\sim f_X(x),-\infty<x<+\infty, Y=g(x),g'(x)>0(或g'(x)<0)$, 则$Y$具有概率密度为:
+$$
+f_Y(y)=
+\begin{cases}
+f_X(h(y))\cdot |h'(y)|,&&\alpha<y<\beta,\\
+0,&&其他
+\end{cases}
+$$
+<font color=Blue>**注意：**</font>
+
+- 这里$(\alpha,\beta)$是$Y$的取值范围，其中: $\alpha=g(-\infty),\beta=g(+\infty)$.
+
+  当$g'(x)<0时, \alpha=g(+\infty), \beta=g(-\infty)$
+
+- $h$是$g$的反函数， 即$h(y)=x\Leftrightarrow y=g(x)$
+
+# 多维随机变量
+
+## 二元随机变量
+
+设$E$是一个随机试验，样本空间$S=\{e\}$; 设$X=X(e)$ 和 $Y=Y(e)$ 是定义在$S$上的随机变量，由他们构成的向量$(X,Y)$成为二维随机向量或二维随机变量。
+
+## 二元离散型随机变量
+
+若二元随机变量$(X,Y)$全部可能取到的不同值是有限对或可列无限对，则称$(X,Y)$是二元离散型随机变量。
+
+### 离散型随机变量的联合概率分布律
+
+设$(X,Y)$所有可能取值为$(x_i,y_j)$, 称$P(X=x_i,Y=y_j)=P_{ij}; i,j=1,2,\cdots$为二元离散型随机变量$(X,Y)$的联合概率分布律。也可建成$(X,Y)$的分布律
+
+#### 联合分布律的性质
+
+1. $P_{ij}\geq0$
+2. $\sum_{i=1}^{\infty}\sum_{j=1}^{\infty}p_{ij}=1$
+3. $P((X,Y)\in D)=\sum_{(x_i,y_j)\in D}p_{ij}$
+
+其中$P_{ij}=P(X=x_i,Y=y_j); i,j=1,2,\cdots$
+
+
+
